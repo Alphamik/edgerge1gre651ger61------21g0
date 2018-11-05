@@ -102,16 +102,16 @@ bot.on('ready', () => {
 
   });
 
-  bot.on('messageReactionAdd', (reaction, user, message) => {
+  //bot.on('messageReactionAdd', (reaction, user, message) => {
 
-    if(reaction.emoji.name === "🔥")
+    //if(reaction.emoji.name === "🔥")
       //if(reaction.author.id !== MikadoID)
       //if(reaction.author.id !== StrangerID)
       //return;
       //if(reaction.content !== "Ceci est un test") return;
-      bot.channels.get("508299538692308993").send(reaction.emoji.name + "Test accomplie avec succes" + reaction.emoji.name);
+     // bot.channels.get("508299538692308993").send(reaction.emoji.name + "Test accomplie avec succes" + reaction.emoji.name);
 
-  });
+  //});
 
 
 bot.login(token);
