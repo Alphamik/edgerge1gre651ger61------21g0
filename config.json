@@ -1,5 +1,5 @@
 {
-    "token": "process.env.TOKEN",
+    "token": process.env.TOKEN,
     "prefix": "*",
     "MikadoID": "301913733536415755",
     "StrangerID": "498623770739605508"
