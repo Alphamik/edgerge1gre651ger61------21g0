@@ -114,4 +114,4 @@ bot.on('ready', () => {
   //});
 
 
-bot.login(token);
+bot.login(process.env.TOKEN);
