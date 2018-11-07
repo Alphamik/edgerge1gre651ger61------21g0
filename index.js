@@ -20,13 +20,6 @@ bot.on('ready', () => {
     
  });
 
-bot.on("guildCreate", guild => {
-  // This event triggers when the bot joins a guild.
-    if(guild.id !== "508032671356813334") return;
-  console.log(`New Member joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  bot.user.setActivity(`Serving ${bot.guilds.size} servers`);
-});
-
 bot.on("guildMemberAdd", (guild, member) => {
     if(guild.id !== "508032671356813334") return;
     console.log(`${member.user.username} joined ${guild.name}. The guild has ${guild.memberCount} members!`);
