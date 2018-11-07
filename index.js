@@ -97,7 +97,7 @@ bot.on("guildMemberRemove", (guild, member) => {
   }
 
   if(message.content.startsWith(prefix + "invitation")){
-     message.channel.send("N'hésitez à inviter des gens sur **N Σ Θ И** ! :fire:\nhttps://discord.gg/uZ9cjBT")
+     message.channel.send("N'hésitez pas à inviter des gens sur **N Σ Θ И** ! :fire:\nhttps://discord.gg/uZ9cjBT")
   }
 
   if(message.content.startsWith(prefix + "pv")){
