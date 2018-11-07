@@ -16,9 +16,29 @@ const StrangerID = config.StrangerID
 //Etat du bot
 bot.on('ready', () => {
     console.log(`${bot.user.tag} est connecté !`);
-    bot.user.setActivity(`N Σ Θ И - X Membres`, {type: "WATCHING"});
+    bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});
     
  });
+
+bot.on("guildCreate", guild => {
+  // This event triggers when the bot joins a guild.
+    if(guild.id !== "508032671356813334") return;
+  console.log(`New Member joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+  bot.user.setActivity(`Serving ${bot.guilds.size} servers`);
+});
+
+bot.on("guildMemberAdd", (guild, member) => {
+    if(guild.id !== "508032671356813334") return;
+    console.log(`${member.user.username} joined ${guild.name}. The guild has ${guild.memberCount} members!`);
+    bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});  
+});
+
+bot.on("guildMemberRemove", (guild, member) => {
+    if(guild.id !== "508032671356813334") return;
+    console.log(`${member.user.username} joined ${guild.name}. The guild has ${guild.memberCount} members!`);
+    bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});  
+});
+
 
  bot.on("message", async message => {
 
