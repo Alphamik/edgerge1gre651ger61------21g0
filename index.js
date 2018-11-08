@@ -21,13 +21,13 @@ bot.on('ready', () => {
  });
 
 bot.on("guildMemberAdd", (guild, member) => {
-    if(guild.id !== "508032671356813334") return;
+    if(bot.guild.id !== "508032671356813334") return;
     console.log(`${member.user.username} joined ${guild.name}. The guild has ${guild.memberCount} members!`);
     bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});  
 });
 
 bot.on("guildMemberRemove", (guild, member) => {
-    if(guild.id !== "508032671356813334") return;
+    if(bot.guild.id !== "508032671356813334") return;
     console.log(`${member.user.username} joined ${guild.name}. The guild has ${guild.memberCount} members!`);
     bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});  
 });
