@@ -19,13 +19,11 @@ bot.on('ready', () => {
     bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});
     
  });
-
-bot.on("guildMemberAdd", (guild, member) => {
+bot.on("guildMemberAdd", member => {
     console.log(`${member.user.username} joined ${guild.name}. The guild has ${guild.memberCount} members!`);
     bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});  
 });
-
-bot.on("guildMemberRemove", (guild, member) => {
+bot.on("guildMemberRemove", member => {
     console.log(`${member.user.username} joined ${guild.name}. The guild has ${guild.memberCount} members!`);
     bot.user.setActivity(`N Σ Θ И - ${bot.guilds.get("508032671356813334").memberCount} Membres`, {type: "WATCHING"});  
 });
