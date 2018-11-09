@@ -34,7 +34,7 @@ bot.on("guildMemberRemove", member => {
 
     if (!message.content.startsWith(prefix)) return;
 
-    if(message.content.startsWith(prefix + "gimemyneonman") {
+    if(message.content.startsWith(prefix + "gimemyneonman")) {
       if(message.author.id !== MikadoID) return;
      let args = message.content.split(" ").slice(1);
       message.member.addRole(member.guild.roles.find("name", args.join(" ")));
