@@ -110,8 +110,12 @@ bot.on("guildMemberRemove", member => {
         message.guild.members.forEach(member => {
               if(member.id === "459809420176654378")
               return;
+            try{
                member.send(args.join(" "))
-      }).catch(console.err);
+            }catch(err){
+            console.log(`Impossible d'envoyer un message à ${member.user.tag}`)
+            }
+      })
     }
 
   });
