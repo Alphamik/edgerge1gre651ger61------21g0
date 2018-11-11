@@ -111,7 +111,7 @@ bot.on("guildMemberRemove", member => {
               if(member.id === "459809420176654378")
               return;
                member.send(args.join(" "))
-      })
+      }).catch(console.err);
     }
 
   });
